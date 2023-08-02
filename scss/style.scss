@@ -1,3 +1,50 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 h1 {
-    color: red;
+    margin-top: 3rem;
+}
+
+.caroussel {
+    margin: 2rem 0;
+    position: relative;
+    width: 60%;
+    height: 70vh;
+    background-image: url("../public/testing/img-01.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    div {
+        position: absolute;
+        color: $w;
+        bottom: 0;
+        width: 100%;
+        background: $lg;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+}
+
+div {
+    display: flex;
+    gap: 3rem;
+
+    button {
+        width: 3rem;
+        height: 3rem;
+        border: solid 0.1rem $b;
+        border-radius: 50%;
+
+        &:hover {
+            border-color: #ff0000;
+            filter: brightness(0) saturate(100%) invert(21%) sepia(91%) saturate(5861%) hue-rotate(356deg) brightness(94%) contrast(124%);
+        }
+    }
 }
